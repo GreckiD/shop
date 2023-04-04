@@ -32,7 +32,7 @@ public class SecurityConfig {
                 .csrf()
                 .disable()
                 .authorizeHttpRequests()
-                .requestMatchers("/admin-reg", "/authenticate", "/register")
+                .requestMatchers("/admin-reg", "/authenticate", "/register", "/", "/VAADIN/**")
                 .permitAll()
                 .requestMatchers("/admin/**").hasAuthority(AccountType.ADMIN.name())
                 .requestMatchers("/customer/**").hasAuthority(AccountType.CUSTOMER.name())

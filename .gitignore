@@ -4,6 +4,7 @@ target/
 mvnw
 mvnw.cmd
 src/main/resources/application.yml
+fontend/
 
 ### STS ###
 .apt_generated
