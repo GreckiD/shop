@@ -1,5 +1,9 @@
-package com.pro.shop.auth;
+package com.pro.shop.controller;
 
+import com.pro.shop.auth.AuthenticationService;
+import com.pro.shop.request.AuthenticationRequest;
+import com.pro.shop.response.AuthenticationResponse;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +22,7 @@ public class AuthenticationController {
 
     @PostMapping("/authenticate")
     public ResponseEntity<AuthenticationResponse> authenticate(
-            @RequestBody AuthenticationRequest request
+            @Valid @RequestBody AuthenticationRequest request
     ) throws Exception {
         return ResponseEntity.ok(authService.authenticate(request));
     }

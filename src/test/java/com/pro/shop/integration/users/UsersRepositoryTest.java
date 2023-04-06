@@ -1,5 +1,8 @@
-package com.pro.shop.users;
+package com.pro.shop.integration.users;
 
+import com.pro.shop.users.AccountType;
+import com.pro.shop.users.User;
+import com.pro.shop.users.UsersRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -13,7 +16,7 @@ class UsersRepositoryTest {
     private UsersRepository usersRepository;
 
     @Test
-    void findByLogin() {
+    void findUserByLoginTest() {
         String login = "Admin";
         User user = User
                 .builder()
