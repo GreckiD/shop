@@ -1,6 +1,6 @@
 package com.pro.shop.auth;
 
-import com.pro.shop.users.UserDetailsService;
+import com.pro.shop.service.UserDetailsService;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

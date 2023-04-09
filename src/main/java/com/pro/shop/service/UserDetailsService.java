@@ -1,5 +1,6 @@
-package com.pro.shop.users;
+package com.pro.shop.service;
 
+import com.pro.shop.users.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

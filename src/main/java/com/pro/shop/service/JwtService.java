@@ -1,4 +1,4 @@
-package com.pro.shop.config;
+package com.pro.shop.service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

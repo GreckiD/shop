@@ -1,5 +1,6 @@
 package com.pro.shop.config;
 
+import com.pro.shop.service.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

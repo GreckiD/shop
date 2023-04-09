@@ -1,7 +1,10 @@
-package com.pro.shop.register;
+package com.pro.shop.controller;
 
-import com.pro.shop.auth.AuthenticationResponse;
+import com.pro.shop.request.RegisterRequest;
+import com.pro.shop.service.RegisterService;
+import com.pro.shop.response.AuthenticationResponse;
 import com.pro.shop.users.AccountType;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -20,15 +23,15 @@ public class RegisterController {
 
     @PostMapping("/admin-reg")
     public ResponseEntity<AuthenticationResponse> registerAdmin(
-            @RequestBody RegisterRequest request
-    ){
+            @Valid @RequestBody RegisterRequest request
+    ) throws Exception {
         return ResponseEntity.ok(registerService.register(request, AccountType.ADMIN));
     }
 
     @PostMapping("/register")
     public ResponseEntity<AuthenticationResponse> register(
-            @RequestBody RegisterRequest request
-    ){
+            @Valid @RequestBody RegisterRequest request
+    ) throws Exception {
         return ResponseEntity.ok(registerService.register(request, AccountType.CUSTOMER));
     }
 
