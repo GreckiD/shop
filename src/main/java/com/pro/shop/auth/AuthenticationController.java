@@ -1,8 +1,5 @@
-package com.pro.shop.controller;
+package com.pro.shop.auth;
 
-import com.pro.shop.auth.AuthenticationService;
-import com.pro.shop.request.AuthenticationRequest;
-import com.pro.shop.response.AuthenticationResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

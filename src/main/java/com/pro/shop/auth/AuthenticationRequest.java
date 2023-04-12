@@ -1,4 +1,4 @@
-package com.pro.shop.request;
+package com.pro.shop.auth;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class RegisterRequest {
+public class AuthenticationRequest {
 
     @NotBlank
     @NotEmpty

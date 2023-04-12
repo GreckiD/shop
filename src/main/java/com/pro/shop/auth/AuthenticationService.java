@@ -1,8 +1,6 @@
 package com.pro.shop.auth;
 
 import com.pro.shop.service.JwtService;
-import com.pro.shop.request.AuthenticationRequest;
-import com.pro.shop.response.AuthenticationResponse;
 import com.pro.shop.users.User;
 import com.pro.shop.users.UsersRepository;
 import lombok.RequiredArgsConstructor;

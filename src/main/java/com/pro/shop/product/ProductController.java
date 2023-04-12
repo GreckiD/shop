@@ -1,7 +1,5 @@
-package com.pro.shop.controller;
+package com.pro.shop.product;
 
-import com.pro.shop.product.Product;
-import com.pro.shop.product.ProductsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

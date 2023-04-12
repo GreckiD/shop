@@ -1,4 +1,4 @@
-package com.pro.shop.response;
+package com.pro.shop.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,5 +1,7 @@
 package com.pro.shop.exception;
 
+import com.pro.shop.admin.repsonse.MessageResponse;
+import com.pro.shop.response.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -11,12 +13,14 @@ public class ApiExceptionHandler {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Object> handleValidationErrors(MethodArgumentNotValidException e) {
-        HttpStatus httpNotFoundStatus = HttpStatus.NOT_FOUND;
-        NotFoundRequest validateRequestException = new NotFoundRequest(
+        HttpStatus status = HttpStatus.NOT_FOUND;
+        MessageResponse validateResponseException = new MessageResponse(
+                false,
                 "Page not found",
-                httpNotFoundStatus.value()
+                status.value()
         );
-        return new ResponseEntity<>(validateRequestException, httpNotFoundStatus);
+        return new ResponseEntity<>(validateResponseException, status);
     }
+
 
 }
