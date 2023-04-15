@@ -1,8 +1,9 @@
-package com.pro.shop.admin.request;
+package com.pro.shop.admin.product;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.*;
+import java.util.*;
 
 @Data
 @Builder
@@ -15,5 +16,6 @@ public class AddProductRequest {
     private String name;
     private String description;
     private Integer quantity;
+    private List<Long> categories;
 
 }

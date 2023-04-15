@@ -1,9 +1,8 @@
 package com.pro.shop.product;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.pro.shop.category.Category;
+import java.util.*;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
@@ -22,5 +21,7 @@ public class Product {
     private String name;
     private String description;
     private Integer quantity;
+    @ManyToMany(fetch = FetchType.LAZY)
+    private List<Category> categories;
 
 }

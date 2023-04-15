@@ -1,8 +1,7 @@
-package com.pro.shop.controller;
+package com.pro.shop.register;
 
-import com.pro.shop.request.RegisterRequest;
-import com.pro.shop.service.RegisterService;
-import com.pro.shop.response.AuthenticationResponse;
+import com.pro.shop.register.RegisterRequest;
+import com.pro.shop.register.RegisterService;
 import com.pro.shop.users.AccountType;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -22,17 +21,17 @@ public class RegisterController {
     private final RegisterService registerService;
 
     @PostMapping("/admin-reg")
-    public ResponseEntity<AuthenticationResponse> registerAdmin(
+    public ResponseEntity<Object> registerAdmin(
             @Valid @RequestBody RegisterRequest request
     ) throws Exception {
-        return ResponseEntity.ok(registerService.register(request, AccountType.ADMIN));
+        return registerService.register(request, AccountType.ADMIN);
     }
 
     @PostMapping("/register")
-    public ResponseEntity<AuthenticationResponse> register(
+    public ResponseEntity<Object> register(
             @Valid @RequestBody RegisterRequest request
-    ) throws Exception {
-        return ResponseEntity.ok(registerService.register(request, AccountType.CUSTOMER));
+    ) {
+        return registerService.register(request, AccountType.CUSTOMER);
     }
 
 }
